@@ -1,0 +1,82 @@
+MTEB ("Masoretic Text" + "ExtraBiblical"):
+Mother data set extracted from the ETCBC database
+Used for research in the SynVar project
+Dirk Bakker, Vrije Universiteit Amsterdam
+Version 2018-02-18
+
+Each line corresponds to one clause.
+
+# Explanation of columns #
+
+More information on many of the features can be found in Constantijn Sikkel, Description of Quest II Data File Format (2014) (Henceforth QDFII)
+
+Administrative:
+1.  group: main corpus group. Levels: AI = Ancient Inscriptions; MT = Masoretic Text; QH = Qumran Hebrew; RH = Rabbinic Hebrew.
+2.  groupChron: MT divided into "diachronic" sections; other main corpus groups taken as a whole. Levels: AI (see col. 1); MT_prex = MT, pre-exilic; MT_exil = MT, exilic; MT_pstx = MT, post-exilic; MT_disp = MT, disputed date; QH; RH (see col. 1).
+3.  groupGenre: MT divided into "genres"; other main corpus groups taken as a whole. Levels: AI (see col. 1); MT_prose = MT, prose; MT_instr = MT, instructional; MT_proph = MT, prophetic; MT_poetr = MT, poetry; MT_lists = MT, lists; QH; RH (see col. 1).
+4.  corpus: separate Bible books for MT; separate texts for AI, QH and RH.
+5.  verse: book/text, chapter and verse number.
+
+Text type:
+6.  text: first and last word of the clause, separated by ~ (if clause consists of one word only, the word has a ~ to the left and right).
+7.  textyp: text type. See QDFII 2.61.
+8.  textyp1: deepest embedded text type level (= last letter of textyp: see col. 7). Levels: N = narrative; Q = quotational; D = discursive; U = unknown.
+9.  textType: textyp1 (see col 8.) divided in Q and nonQ (= N, D, U collectively).
+10. ttdepthcat: = deepest text type level (= col. 8), combined with the level of embedding.
+
+Clausal properties:
+11. ques: whether the clause is interrogative (defined by the presence of an interrogative word) or not. Levels: ques = interrogative; noques = not interrogative.
+12. posneg: whether the clause is positive (declarative) or negated (defined by the presence of a negative particle). Levels: posi = positive; nega = negated.
+13. cltyp: clause type. See QDFII 2.54.
+14. cltyptense: verbal "tense", as expressed by the cltyp label (col. 13). Levels: qtl = qatal; yqt = yiqtol; way = wayyiqtol; imp = imperative; ifc = infinitive construct; ifa = infinitive absolute; ptc = participle (active or passive); ajv = adjectival predicate; nom = nominal predicate; w_p = without overt predicator
+15. cltypW: presence versus absence of W in the cltyp label (col. 13); only available for the finite tenses. Levels: W0 = clause type label has no W; W1 = clause type label has W; - = non-finite clause type.
+16. cltypx: presence versus absence of x (= any non-subject constituent other than coordinative conjunction) in the cltyp label (col. 13); only available for the finite tenses. Levels: x0 = clause label has no x; x1 = clause label has x; - = non-finite clause type.
+17. cltypX: presence versus absence of X (= explicit subject) in the cltyp label (col. 13); only available for the finite tenses. Levels: X0 = label has no X; X1 = label has X before predicate; X2 = label has X after predicate; - = non-finite clause type.
+
+Conjunctive elements:
+18. cjelpres: presence versus absence of a conjunctive element (cjel). Levels: asynd = clause has no cjel (i.e., asyndetic); synd = clause has cjel (syndetic).
+19. copres: presence versus absence of a "coordinative" cjel; i.e., W or >W. Levels: co+ = has coordinative conjunctive element; co- = has no coordinative conjunctive element.
+20. supres: presence versus absence of a "subordinative" cjel. Levels: su- = has no subordinative cjel; su+ = has subordinative cjel.
+21. capres: presence versus absence of a conjunctive adverb. Levels: ca- = has no conjunctive adverb; ca+ = has conjunctive adverb.
+22. colex: lexeme of coordinative cjel. Levels: W; >w.
+23. supdp: phrase dependent part(s) of speech of (the words constituting) the subordinative cjel. See QDFII 2.28.
+24. sulex: lexeme(s) of (the words constituting) the subordinative cjel.
+25. calex: lexeme(s) of the conjunctive adverb
+
+Predicates:
+26. predpres: presence versus absence of an overt [core] predicator. Levels: hasP = has predicator; no_P = has no predicator.
+27. predstruc: predicate structure; i.e., whether the predicate is simple (consisting of one predicator) or compound (consisting of copula HJH + predicate complement). Levels: simple; compound; noP = has no [core] predicator.
+28. predcat: predicate category. Levels: finit = finite; nonfi = non-finite; nonvb = non-verbal.
+29. predtyp: predicate type. Levels are prefixed by fi_ = finite; nf_ = non-finite; nv_ = non-verbal.
+30. copulaPC: (for compound predicates; see col. 27 predstruc) the predicate type (see col. 29) of the copula and the precphrcatPP (see col. 31 below) of the predicate complement.
+31. precphrcatPP: phrase category of the predicate complement (if present). Levels: verb = verbal (i.e., participial); nmaj = nominal or adjectival; pron = pronominal; advb = adverbial; prep = prepositional; noPC = clause has no predicate complement.
+32. precphr: phrase type and (where applicable) determination of the predicate complement. See QDFII 2.46.
+
+Subjects:
+33. subjpres: presence versus absence of explicit subject (any kind; phrasal or clausal). Levels: hasS = has subject; no_S = no subject.
+34. subjcat: subject category; i.e., whether the subject is phrasal or clausal (i.e., a subject clause). Levels: phrasal, clausal; no_subj = no subject.
+35. subjphr: phrase type and (where applicable) determination of the phrasal subject. See QDFII 2.46.
+36. subjtyp: subject type. Levels: nomi = nominal; pron = independent-pronominal; sufx = subject suffix not attached to the core predicator; sufP = subject suffix attached to the core predicator; clau = subject clause; no_subj = no subject.
+
+Constituent order (core Predicator and Subject)
+37. spps: relative order of predicator and subject (phrasal or clausal). Levels: PS; SP; noPorS = clause has no core predicator and/or no subject.
+38. cofront: presence versus absence of fronted constituents (= anything except coordinative conjunction). Levels: xP: has fronted constituents; zP = has no fronted constituents.
+
+Objects:
+39. objcpres: presence versus absence of object(s) (any kind; phrasal or clausal). Levels: hasO = clause has object(s); no_O = clause has no object.
+40. objccat: object category; i.e., whether the object is phrasal or clausal (i.e., an object clause). Levels: phrasal; clausal; phr&cla = phrasal and clausal; no_objc = no object.
+41. objcphrcat: object phrase category. Levels: nomi = nominal; pron_ind = independent-pronominal; pron_suf = object suffix; no_phraobjc = no phrasal object.
+42. objcphrdet: phrase type and determination of the phrasal object.
+
+Main and subordinate clauses:
+43. mainsub: main vs. subordinate clauses. Levels: main; subo = subordinate.
+44. carc: clause atom relation code. See QDFII 2.52.
+45. ccr: clause constituent relation. See QDFII 2.55.
+
+Text-hierarchic trees (numeric)
+46. totaltreeSize: size (in number of clauses) of the entire hierarchy tree to which the clause belongs.
+47. totaltreeHeight: height of the entire hierarchy tree to which the clause belongs.
+48. nodeDepth: depth of the clause (counted from the top) in the entire hierarchy tree to which it belongs.
+49. nodeDaughters: the number of direct daughters which the clause has.
+50. subtreeSize: size (in number of clauses) of the subtree which the clause opens.
+51. subtreeHeight: height of the subtree which the clause opens.
