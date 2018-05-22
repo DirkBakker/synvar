@@ -8,7 +8,7 @@ Each line corresponds to one clause.
 
 # Explanation of columns #
 
-More information on many of the features can be found in Constantijn Sikkel, Description of Quest II Data File Format (2014) (Henceforth QDFII)
+More information on many of the features can be found in Constantijn Sikkel, Description of Quest II Data File Format (2014) (Henceforth QDFII).
 
 Administrative:
 1.  group: main corpus group. Levels: AI = Ancient Inscriptions; MT = Masoretic Text; QH = Qumran Hebrew; RH = Rabbinic Hebrew.
@@ -16,9 +16,9 @@ Administrative:
 3.  groupGenre: MT divided into "genres"; other main corpus groups taken as a whole. Levels: AI (see col. 1); MT_prose = MT, prose; MT_instr = MT, instructional; MT_proph = MT, prophetic; MT_poetr = MT, poetry; MT_lists = MT, lists; QH; RH (see col. 1).
 4.  corpus: separate Bible books for MT; separate texts for AI, QH and RH.
 5.  verse: book/text, chapter and verse number.
+6.  text: first and last word of the clause, separated by ~ (if clause consists of one word only, the word has a ~ to the left and right).
 
 Text type:
-6.  text: first and last word of the clause, separated by ~ (if clause consists of one word only, the word has a ~ to the left and right).
 7.  textyp: text type. See QDFII 2.61.
 8.  textyp1: deepest embedded text type level (= last letter of textyp: see col. 7). Levels: N = narrative; Q = quotational; D = discursive; U = unknown.
 9.  textType: textyp1 (see col 8.) divided in Q and nonQ (= N, D, U collectively).
@@ -28,7 +28,7 @@ Clausal properties:
 11. ques: whether the clause is interrogative (defined by the presence of an interrogative word) or not. Levels: ques = interrogative; noques = not interrogative.
 12. posneg: whether the clause is positive (declarative) or negated (defined by the presence of a negative particle). Levels: posi = positive; nega = negated.
 13. cltyp: clause type. See QDFII 2.54.
-14. cltyptense: verbal "tense", as expressed by the cltyp label (col. 13). Levels: qtl = qatal; yqt = yiqtol; way = wayyiqtol; imp = imperative; ifc = infinitive construct; ifa = infinitive absolute; ptc = participle (active or passive); ajv = adjectival predicate; nom = nominal predicate; w_p = without overt predicator
+14. cltyptense: verbal "tense", as expressed by the cltyp label (col. 13). Levels: qtl = qatal; yqt = yiqtol; way = wayyiqtol; imp = imperative; ifc = infinitive construct; ifa = infinitive absolute; ptc = participle (active or passive); ajv = adjectival predicate; nom = nominal predicate; w_p = without overt predicator.
 15. cltypW: presence versus absence of W in the cltyp label (col. 13); only available for the finite tenses. Levels: W0 = clause type label has no W; W1 = clause type label has W; - = non-finite clause type.
 16. cltypx: presence versus absence of x (= any non-subject constituent other than coordinative conjunction) in the cltyp label (col. 13); only available for the finite tenses. Levels: x0 = clause label has no x; x1 = clause label has x; - = non-finite clause type.
 17. cltypX: presence versus absence of X (= explicit subject) in the cltyp label (col. 13); only available for the finite tenses. Levels: X0 = label has no X; X1 = label has X before predicate; X2 = label has X after predicate; - = non-finite clause type.
@@ -41,7 +41,7 @@ Conjunctive elements:
 22. colex: lexeme of coordinative cjel. Levels: W; >w.
 23. supdp: phrase dependent part(s) of speech of (the words constituting) the subordinative cjel. See QDFII 2.28.
 24. sulex: lexeme(s) of (the words constituting) the subordinative cjel.
-25. calex: lexeme(s) of the conjunctive adverb
+25. calex: lexeme(s) of the conjunctive adverb.
 
 Predicates:
 26. predpres: presence versus absence of an overt [core] predicator. Levels: hasP = has predicator; no_P = has no predicator.
@@ -73,7 +73,7 @@ Main and subordinate clauses:
 44. carc: clause atom relation code. See QDFII 2.52.
 45. ccr: clause constituent relation. See QDFII 2.55.
 
-Text-hierarchic trees (numeric)
+Text-hierarchic trees (numeric):
 46. totaltreeSize: size (in number of clauses) of the entire hierarchy tree to which the clause belongs.
 47. totaltreeHeight: height of the entire hierarchy tree to which the clause belongs.
 48. nodeDepth: depth of the clause (counted from the top) in the entire hierarchy tree to which it belongs.
