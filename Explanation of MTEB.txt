@@ -1,10 +1,11 @@
 MTEB ("Masoretic Text" + "ExtraBiblical"):
 Mother data set extracted from the ETCBC database
 Used for research in the SynVar project
+for the monograph Diachronic Aspects of Classical Hebrew Syntax: A Text-Critical Approach
 Dirk Bakker, Vrije Universiteit Amsterdam
 Version 2018-02-18
 
-Each line corresponds to one clause.
+Each line in the csv file corresponds to one clause.
 
 # Explanation of columns #
 
@@ -47,7 +48,7 @@ Predicates:
 26. predpres: presence versus absence of an overt [core] predicator. Levels: hasP = has predicator; no_P = has no predicator.
 27. predstruc: predicate structure; i.e., whether the predicate is simple (consisting of one predicator) or compound (consisting of copula HJH + predicate complement). Levels: simple; compound; noP = has no [core] predicator.
 28. predcat: predicate category. Levels: finit = finite; nonfi = non-finite; nonvb = non-verbal.
-29. predtyp: predicate type. Levels are prefixed by fi_ = finite; nf_ = non-finite; nv_ = non-verbal.
+29. predtyp: predicate type. Levels are prefixed by fi_ = finite; nf_ = non-finite; nv_ = non-verbal. Levels: perf (perfect), impf (imperfect), wayq (wayyiqtol), impv (imperative), infc (infinitive construct), infa (infinitive absolute), ptca (active participle), ptcp (passive participle), adjv (adjectival predicates), nvna (non-verbal predicates other than adjv), nopr (no overt predicator)
 30. copulaPC: (for compound predicates; see col. 27 predstruc) the predicate type (see col. 29) of the copula and the precphrcatPP (see col. 31 below) of the predicate complement.
 31. precphrcatPP: phrase category of the predicate complement (if present). Levels: verb = verbal (i.e., participial); nmaj = nominal or adjectival; pron = pronominal; advb = adverbial; prep = prepositional; noPC = clause has no predicate complement.
 32. precphr: phrase type and (where applicable) determination of the predicate complement. See QDFII 2.46.
