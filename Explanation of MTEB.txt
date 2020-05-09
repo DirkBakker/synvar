@@ -70,7 +70,7 @@ Objects:
 42. objcphrdet: phrase type and determination of the phrasal object.
 
 Main and subordinate clauses:
-43. mainsub: main vs. subordinate clauses. Levels: main; subo = subordinate.
+43. mainsub: main vs. subordinate clauses. Levels: main; subo = subordinate; uncl = unclassified.
 44. carc: clause atom relation code. See QDFII 2.52.
 45. ccr: clause constituent relation. See QDFII 2.55.
 
